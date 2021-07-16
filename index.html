@@ -169,49 +169,37 @@
 
                 <!--back to top-->
 
-                <div class="btnToTop">
-                    <button>
-                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px"
-                            viewBox="0 0 284.929 284.929" style="enable-background:new 0 0 284.929 284.929;"
-                            xml:space="preserve">
-                            <g>
-                                <path
-                                    d="M282.082,195.285L149.028,62.24c-1.901-1.903-4.088-2.856-6.562-2.856s-4.665,0.953-6.567,2.856L2.856,195.285 C0.95,197.191,0,199.378,0,201.853c0,2.474,0.953,4.664,2.856,6.566l14.272,14.271c1.903,1.903,4.093,2.854,6.567,2.854 c2.474,0,4.664-0.951,6.567-2.854l112.204-112.202l112.208,112.209c1.902,1.903,4.093,2.848,6.563,2.848 c2.478,0,4.668-0.951,6.57-2.848l14.274-14.277c1.902-1.902,2.847-4.093,2.847-6.566 C284.929,199.378,283.984,197.188,282.082,195.285z" />
-                            </g>
-                        </svg>
-                    </button>
-                </div>
+            <button onclick="topFunction()" id="myBtn" title="Go to top">
+                <svg version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 284.929 284.929"
+                    style="enable-background:new 0 0 284.929 284.929;">
+                    <g>
+                        <path
+                            d="M282.082,195.285L149.028,62.24c-1.901-1.903-4.088-2.856-6.562-2.856s-4.665,0.953-6.567,2.856L2.856,195.285 C0.95,197.191,0,199.378,0,201.853c0,2.474,0.953,4.664,2.856,6.566l14.272,14.271c1.903,1.903,4.093,2.854,6.567,2.854 c2.474,0,4.664-0.951,6.567-2.854l112.204-112.202l112.208,112.209c1.902,1.903,4.093,2.848,6.563,2.848 c2.478,0,4.668-0.951,6.57-2.848l14.274-14.277c1.902-1.902,2.847-4.093,2.847-6.566 C284.929,199.378,283.984,197.188,282.082,195.285z" />
+                    </g>
+                </svg>
+            </button>
+            
+            <script>
+                //Get the button
+                var mybutton = document.getElementById("myBtn");
 
+                // When the user scrolls down 20px from the top of the document, show the button
+                window.onscroll = function () { scrollFunction() };
 
-                <script src="./script.js">
-                    const btnToTop = document.querySelector('.btnToTop');
+                function scrollFunction() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        mybutton.style.display = "block";
+                    } else {
+                        mybutton.style.display = "none";
+                    }
+                }
 
-                    // 1. window.scrollTo()
-                    // btnToTop.addEventListener('click', () => {
-                    //   window.scrollTo(0, 0);
-                    // })
-
-                    // 2. window.scroll()
-                    // btnToTop.addEventListener('click', () => {
-                    //   window.scroll({
-                    //     top: 0,
-                    //     behavior: 'smooth'
-                    //   })
-                    // })
-
-                    // 3. document.documentElement.scrollTop()
-                    // btnToTop.addEventListener('click', () => {
-                    //   document.documentElement.scrollTop = 0;
-                    // })
-
-                    // 4. document.documentElement.scrollIntoView()
-                    btnToTop.addEventListener('click', () => {
-                        document.documentElement.scrollIntoView({
-                            behavior: 'smooth'
-                        })
-                    })
-                </script>
+                // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                }
+            </script>
 
 </body>
 

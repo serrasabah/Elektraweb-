@@ -1055,21 +1055,26 @@ li a :hover {
   display: inline-block;
 } */
 
-.btnToTop svg {
+#myBtn {
   width: 44px;
   height: 44px;
   padding: 9px;
-  border-radius: 7px;
-  background: #6e6e6e;
-  fill: #c2c2c2;
+  display: none;
   position: fixed;
   bottom: 2rem;
   right: 2rem;
+  /* z-index: 99; */
+  border: none;
+  outline: none;
+  background: #6e6e6e;
+  fill: #c2c2c2;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
+
+  border-radius: 7px;
 }
 
-.btnToTop svg:hover {
+#myBtn:hover {
   background: #222222;
   fill: #d1d1d1;
 }
