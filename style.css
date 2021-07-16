@@ -1021,6 +1021,20 @@ a.iça {
   color: white;
 }
 
+@media only screen and (max-width: 1120px) {
+  .buluttanım #li .e_p_a1 .iça {
+    text-align: left;
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 10px;
+    text-decoration: none;
+    color: #e30d18;
+    font-size: 14px;
+    padding: 0;
+    /* background-color: rgb(240, 240, 240); */
+    width: 160px;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   .buluttanım #li .e_p_a1 .iça {
     text-align: left;
